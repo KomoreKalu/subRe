@@ -1,4 +1,6 @@
+#!/usr/bin/python3
 import os
+import sys
 
 video_ext = "mkv"
 sub_ext = "ass"
@@ -28,5 +30,8 @@ def rename():
 
 
 if __name__ == "__main__":
+    if len(sys.argv) == 3:
+        video_ext = sys.argv[1]
+        sub_ext = sys.argv[2]
     get_name(folder)
     rename()
